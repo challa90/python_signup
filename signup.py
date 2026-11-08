@@ -31,7 +31,7 @@ def signup():
 
         cur.execute(
             """
-            INSERT INTO users (username, email, password)
+            INSERT INTO signup (username, email, password)
             VALUES (%s, %s, %s)
             """,
             (username, email, password)

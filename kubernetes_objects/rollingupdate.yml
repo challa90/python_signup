@@ -18,7 +18,8 @@ spec:
         app: flask-app
     spec:
       containers:
-      - name: nginx
+      - name: flask
         image: signup
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-dp
+  labels:
+    app: my-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-dp
+  template:
+    metadata: 
+      labels:
+        app: my-dp
+    spec:
+      containers:
+      - name: signup1
+        image: signup:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000

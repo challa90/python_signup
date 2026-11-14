@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: my-dp
   labels:
-    app: my-app
+    app: flask-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-dp
+      app: flask-app
   template:
     metadata: 
       labels:
-        app: my-dp
+        app: flask-app
     spec:
       containers:
       - name: signup1
